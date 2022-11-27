@@ -1,6 +1,6 @@
 export const request = async (url, data, type, image) =>  {
   try {
-    const URL = 'https://shopturzim3632.herokuapp.com/api'//http://localhost:3001/api
+    const URL = 'https://shop-back.vercel.app/api'//http://localhost:3001/api
     let body
     const key = localStorage.getItem('key')
     if (type === 'get' || type === 'delete' || type === 'put') {
