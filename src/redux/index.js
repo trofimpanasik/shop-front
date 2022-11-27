@@ -1,0 +1,7 @@
+import user from './stores/user'
+import {combineReducers} from "redux"
+
+const rootReducer = combineReducers({
+  user
+})
+export default rootReducer
