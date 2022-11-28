@@ -1,26 +1,23 @@
 export const request = async (url, data, type, image) =>  {
   try {
-    const URL = 'https://shop-back.vercel.app/api'//http://localhost:3001/api
+    const URL = 'localhost:3001'//http://localhost:3001/api
     let body
     const key = localStorage.getItem('key')
     if (type === 'get' || type === 'delete' || type === 'put') {
       body = {
-        mode: 'cors',
         method: type.toUpperCase(),
         headers: {'Content-Type': 'application/json', authorization: key},
         url: `${URL}${url}`
       }
     } else if(image) {
       body = {
-        mode: 'cors',
         method: type.toUpperCase(),
-        headers: {authorization: key},
+        headers: {'Content-Type':  'application/json', authorization: key},
         url: `${URL}${url}`,
         body: image
       }
     } else {
       body = {
-        mode: 'cors',
         method: type.toUpperCase(),
         headers: {'Content-Type': 'application/json', authorization: key},
         url: `${URL}${url}`,
