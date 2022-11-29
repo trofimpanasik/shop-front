@@ -1,6 +1,6 @@
 export const request = async (url, data, type, image) =>  {
   try {
-    const URL = 'http://localhost:49374/api'//http://localhost:3001/api
+    const URL = 'http://10.100.31.123:49374/api'//http://localhost:3001/api
     let body
     const key = localStorage.getItem('key')
     if (type === 'get' || type === 'delete' || type === 'put') {
